@@ -6,4 +6,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="createGame">Create Game</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="buttonValidateMap">Validate the location</string>
+    <string name="title_activity_match">MatchActivity</string>
 </resources>

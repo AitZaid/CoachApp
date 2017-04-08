@@ -7,4 +7,6 @@
     <string name="navigation_drawer_close">Ferme l\'onglet de navigation</string>
 
     <string name="action_settings">Paramètres</string>
+    <string name="createGame">Nouveau Match</string>
+    <string name="buttonValidateMap">Valider L\'emplacement</string>
 </resources>
