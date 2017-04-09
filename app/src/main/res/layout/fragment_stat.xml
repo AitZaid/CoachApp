@@ -27,9 +27,10 @@
 
         <Button
             android:id="@+id/buttonShots"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
 
         <TextView
@@ -48,9 +49,10 @@
 
         <Button
             android:id="@+id/buttonShotsOn"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
     </LinearLayout>
 
@@ -75,9 +77,10 @@
 
         <Button
             android:id="@+id/buttonFouls"
+            style="@android:style/Widget.Material.Button.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
 
         <TextView
@@ -96,9 +99,10 @@
 
         <Button
             android:id="@+id/buttonOffsides"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
     </LinearLayout>
 
@@ -123,9 +127,10 @@
 
         <Button
             android:id="@+id/buttonYellows"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
 
         <TextView
@@ -144,9 +149,10 @@
 
         <Button
             android:id="@+id/buttonReds"
+            style="@android:style/Widget.Material.Button.Borderless.Small"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="33dp"
+            android:background="@color/colorPrimary"
             android:text="+1" />
     </LinearLayout>
 </LinearLayout>

@@ -73,39 +73,50 @@
 
     <Button
         android:id="@+id/buttonScore1"
+        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:background="@color/colorPrimary"
         android:text="@string/goalButton"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonTimer"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintLeft_creator="1" />
 
     <!-- attente modif-->
     <Button
         android:id="@+id/buttonScore2"
+        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp"
         android:text="Goal"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/textScore2"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:visibility="visible"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonTimer"
+        app:layout_constraintLeft_toLeftOf="@+id/textScore2"
+        app:layout_constraintRight_toRightOf="@+id/textScore2"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/textScore2" />
+        tools:layout_constraintRight_creator="1" />
 
     <!-- attente modif-->
     <Button
         android:id="@+id/buttonTimer"
+        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_constraintTop_creator="1"
         android:layout_marginStart="20dp"
         android:layout_marginTop="131dp"
-        tools:layout_constraintLeft_creator="1"
+        android:background="?attr/colorPrimary"
+        android:text="Button"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintLeft_toRightOf="@+id/buttonScore1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/buttonScore1" />
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
 </android.support.constraint.ConstraintLayout>
