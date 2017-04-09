@@ -35,6 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         validateButton = (Button) findViewById(R.id.button);
+        validateButton.setEnabled(false);
 
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             public void onMapClick(LatLng position) {
+                validateButton.setEnabled(true);
                 if (m != null) { //if marker exists (not null or whatever)
                     m.setPosition(position);
                 } else {

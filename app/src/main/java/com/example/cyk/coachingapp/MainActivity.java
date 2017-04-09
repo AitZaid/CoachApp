@@ -3,6 +3,7 @@ package com.example.cyk.coachingapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
@@ -96,6 +98,11 @@ public class MainActivity extends AppCompatActivity
 
                     TextView Y = (TextView) v.findViewById(R.id.Y);
                     Y.setText(c.getString(c.getColumnIndex("Y")));
+
+                    ImageView img = (ImageView) v.findViewById(R.id.picture);
+                    if(c.getString(c.getColumnIndex("uri"))!=null) {
+                        img.setImageURI(Uri.parse(c.getString(c.getColumnIndex("uri"))));
+                    }
                 }while (c.moveToNext());
             }
         }

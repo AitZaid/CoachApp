@@ -7,12 +7,12 @@
     >
 
     <ImageView
-        android:id="@+id/avatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        tools:background="#AAA"
+        android:id="@+id/picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/name"
-        android:layout_alignParentStart="true" />
+        tools:background="#AAA" />
 
     <TextView
         android:id="@+id/score1"
@@ -79,10 +79,11 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
         android:text="Shots:"
-        android:layout_below="@+id/avatar"
-        android:layout_alignEnd="@+id/avatar" />
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/picture"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/shots"
