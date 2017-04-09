@@ -9,4 +9,12 @@
     <string name="action_settings">Paramètres</string>
     <string name="createGame">Nouveau Match</string>
     <string name="buttonValidateMap">Valider L\'emplacement</string>
+    <string name="goalButton">But !</string>
+    <string name="shotButton">tirs</string>
+    <string name="onTargetButton">cadre</string>
+    <string name="foulsButton">fautes</string>
+    <string name="hjButton">hors-jeu</string>
+    <string name="yellowButton">carton jaune</string>
+    <string name="redButton">carton rouge</string>
+    <string name="endButton">fin du match</string>
 </resources>

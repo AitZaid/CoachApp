@@ -65,6 +65,8 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
                 long newRowId = database.insert(DbHelper.DATABASE_NAME, null, values);
             }
         });
+
+
     }
 
 
@@ -72,4 +74,6 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
 }

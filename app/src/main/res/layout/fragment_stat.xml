@@ -16,7 +16,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Shots" />
+            android:text="@string/goalButton" />
 
         <TextView
             android:id="@+id/textShots"
@@ -37,7 +37,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Shots on target" />
+            android:text="@string/onTargetButton" />
 
         <TextView
             android:id="@+id/textShotsOn"
@@ -64,7 +64,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Fouls" />
+            android:text="@string/foulsButton" />
 
         <TextView
             android:id="@+id/textFouls"
@@ -85,7 +85,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Offside" />
+            android:text="@string/hjButton" />
 
         <TextView
             android:id="@+id/textOffsides"
@@ -112,7 +112,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Yellow cards" />
+            android:text="@string/yellowButton" />
 
         <TextView
             android:id="@+id/textYellow"
@@ -133,7 +133,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Red cards" />
+            android:text="@string/redButton" />
 
         <TextView
             android:id="@+id/textRed"

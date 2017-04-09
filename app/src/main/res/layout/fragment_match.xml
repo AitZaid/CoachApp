@@ -76,12 +76,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:text="Goal"
+        android:text="@string/goalButton"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonTimer"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent" />
 
+    <!-- attente modif-->
     <Button
         android:id="@+id/buttonScore2"
         android:layout_width="0dp"
@@ -94,6 +95,7 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/textScore2" />
 
+    <!-- attente modif-->
     <Button
         android:id="@+id/buttonTimer"
         android:layout_width="wrap_content"
