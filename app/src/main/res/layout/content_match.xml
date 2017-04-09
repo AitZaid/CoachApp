@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.cyk.coachingapp.MatchActivity"
-    tools:showIn="@layout/activity_match">
+    tools:showIn="@layout/activity_match"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.cyk.coachingapp.MatchFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.cyk.coachingapp.StatFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <Button
+        android:id="@+id/buttonEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Match" />
+
+</LinearLayout>
