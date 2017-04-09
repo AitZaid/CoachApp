@@ -17,4 +17,5 @@
     <string name="yellowButton">carton jaune</string>
     <string name="redButton">carton rouge</string>
     <string name="endButton">fin du match</string>
+    <string name="timeField">temps</string>
 </resources>

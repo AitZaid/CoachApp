@@ -18,5 +18,6 @@
     <string name="yellowButton">yellow card</string>
     <string name="redButton">red card</string>
     <string name="endButton">End Game</string>
+    <string name="timeField">time</string>
 
 </resources>
