@@ -67,6 +67,10 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
                 values.put(allColumns[11],mIntent.getDoubleExtra("X",0));
                 values.put(allColumns[12],mIntent.getDoubleExtra("Y",0));
                 long newRowId = database.insert("matchs", null, values);
+
+
+                Intent intent = new Intent(MatchActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
