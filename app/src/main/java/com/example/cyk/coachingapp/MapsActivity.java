@@ -39,7 +39,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapsActivity.this, MatchActivity.class));
+                Bundle mBundle = new Bundle();
+                if(m!=null) {
+                    mBundle.putDouble("X", m.getPosition().latitude);
+                    mBundle.putDouble("Y", m.getPosition().longitude);
+                }
+                Intent intent = new Intent(MapsActivity.this, MatchActivity.class).putExtras(mBundle);
+                startActivity(intent);
             }
         });
 

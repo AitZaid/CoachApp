@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:background="#AAA"
+        android:layout_below="@+id/name"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:text="Score1"
+        android:layout_below="@+id/name"
+        android:layout_alignStart="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:text="Time"
+        android:layout_below="@+id/name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="43dp" />
+
+    <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:text="Score2"
+        android:layout_alignEnd="@+id/shotsOn"
+        android:layout_alignBottom="@+id/score1" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:layout_above="@+id/textView15"
+        android:layout_toEndOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_alignEnd="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/Y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y"
+        android:layout_alignBaseline="@+id/X"
+        android:layout_alignBottom="@+id/X"
+        android:layout_toEndOf="@+id/shotsOn"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Shots:"
+        android:layout_below="@+id/avatar"
+        android:layout_alignEnd="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/shots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_above="@+id/textView30"
+        android:layout_toEndOf="@+id/textView30"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/offsides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView30"
+        android:layout_alignBottom="@+id/textView30"
+        android:layout_alignStart="@+id/shots" />
+
+    <TextView
+        android:id="@+id/reds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView34"
+        android:layout_alignBottom="@+id/textView34"
+        android:layout_alignStart="@+id/fouls" />
+
+    <TextView
+        android:id="@+id/yellows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView37"
+        android:layout_alignBottom="@+id/textView37"
+        android:layout_toEndOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shots on target: "
+        android:layout_alignBaseline="@+id/shots"
+        android:layout_alignBottom="@+id/shots"
+        android:layout_toEndOf="@+id/shots"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/shotsOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_toEndOf="@+id/yellows"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/fouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignEnd="@+id/time" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fouls:"
+        android:layout_alignBottom="@+id/shotsOn"
+        android:layout_alignTop="@+id/shotsOn"
+        android:layout_toStartOf="@+id/time"
+        android:layout_alignEnd="@+id/textView37" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_below="@+id/textView15"
+        android:layout_marginTop="20dp"
+        android:text="Offside" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yellow Cards"
+        android:layout_alignBaseline="@+id/offsides"
+        android:layout_alignBottom="@+id/offsides"
+        android:layout_alignStart="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red cards"
+        android:layout_alignBottom="@+id/reds"
+        android:layout_toEndOf="@+id/shotsOn"
+        android:layout_alignTop="@+id/reds" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/time"
+        android:layout_alignParentTop="true"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+</RelativeLayout>

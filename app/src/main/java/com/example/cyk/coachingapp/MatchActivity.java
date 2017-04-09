@@ -1,6 +1,7 @@
 package com.example.cyk.coachingapp;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
         matchFragment = (MatchFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         statFragment = (StatFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
 
+        dbHelper = new DbHelper(this);
 
         database = dbHelper.getWritableDatabase();
 
@@ -61,8 +63,10 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
                 values.put(allColumns[8],resultStat[3]);
                 values.put(allColumns[9],resultStat[4]);
                 values.put(allColumns[10],resultStat[5]);
-
-                long newRowId = database.insert(DbHelper.DATABASE_NAME, null, values);
+                Intent mIntent = getIntent();
+                values.put(allColumns[11],mIntent.getDoubleExtra("X",0));
+                values.put(allColumns[12],mIntent.getDoubleExtra("Y",0));
+                long newRowId = database.insert("matchs", null, values);
             }
         });
 

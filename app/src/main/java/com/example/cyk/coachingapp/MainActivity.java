@@ -1,10 +1,10 @@
 package com.example.cyk.coachingapp;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,9 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private SQLiteDatabase database;
+    private DbHelper dbHelper;
+    private String[] allColumns = {"_id","score1","score2","name","time","Shots","ShotsOn","Fouls","Offsides","Yellows","Reds","X","Y","uri"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +29,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -41,6 +38,69 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        dbHelper = new DbHelper(this);
+
+        database = dbHelper.getReadableDatabase();
+        Cursor c=null;
+        c = database.rawQuery("Select * from matchs order by _id desc limit 3 ",null );
+
+        int i=1;
+
+        if (c != null ) {
+            if  (c.moveToFirst()) {
+                do {
+                    View v = null;
+                    if (i==1) {
+                        v = findViewById(R.id.include3);
+                    }
+                    else if (i==2){
+                        v = findViewById(R.id.include2);
+                    }
+                    else {
+                        v = findViewById(R.id.include4);
+                    }
+                    i++;
+                    TextView score1 = (TextView) v.findViewById(R.id.score1);
+                    score1.setText(c.getString(c.getColumnIndex("score1")));
+
+                    TextView score2 = (TextView) v.findViewById(R.id.score2);
+                    score2.setText(c.getString(c.getColumnIndex("score2")));
+
+                    TextView name = (TextView) v.findViewById(R.id.name);
+                    name.setText(c.getString(c.getColumnIndex("name")));
+
+                    TextView time = (TextView) v.findViewById(R.id.time);
+                    time.setText(c.getString(c.getColumnIndex("time")));
+
+                    TextView shots = (TextView) v.findViewById(R.id.shots);
+                    shots.setText(c.getString(c.getColumnIndex("shots")));
+
+                    TextView shotsOn = (TextView) v.findViewById(R.id.shotsOn);
+                    shotsOn.setText(c.getString(c.getColumnIndex("ShotsOn")));
+
+                    TextView fouls = (TextView) v.findViewById(R.id.fouls);
+                    fouls.setText(c.getString(c.getColumnIndex("Fouls")));
+
+                    TextView offsides = (TextView) v.findViewById(R.id.offsides);
+                    offsides.setText(c.getString(c.getColumnIndex("Offsides")));
+
+                    TextView yellows = (TextView) v.findViewById(R.id.yellows);
+                    yellows.setText(c.getString(c.getColumnIndex("Yellows")));
+
+                    TextView reds = (TextView) v.findViewById(R.id.reds);
+                    reds.setText(c.getString(c.getColumnIndex("Reds")));
+
+                    TextView X = (TextView) v.findViewById(R.id.X);
+                    X.setText(c.getString(c.getColumnIndex("X")));
+
+                    TextView Y = (TextView) v.findViewById(R.id.Y);
+                    Y.setText(c.getString(c.getColumnIndex("Y")));
+                }while (c.moveToNext());
+            }
+        }
+
+
     }
 
     @Override
