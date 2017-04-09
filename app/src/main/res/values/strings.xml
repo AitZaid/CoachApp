@@ -10,4 +10,13 @@
     <string name="title_activity_maps">Map</string>
     <string name="buttonValidateMap">Validate the location</string>
     <string name="title_activity_match">MatchActivity</string>
+    <string name="goalButton">Goal!</string>
+    <string name="shotButton">Shots</string>
+    <string name="onTargetButton">on target</string>
+    <string name="foulsButton">fouls</string>
+    <string name="hjButton">offsides</string>
+    <string name="yellowButton">yellow card</string>
+    <string name="redButton">red card</string>
+    <string name="endButton">End Game</string>
+
 </resources>
