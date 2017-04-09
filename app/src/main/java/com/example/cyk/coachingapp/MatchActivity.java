@@ -1,5 +1,7 @@
 package com.example.cyk.coachingapp;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,6 +25,12 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
     private int[] resultStat;
     private Object[] resultMatch;
 
+    private SQLiteDatabase database;
+    private DbHelper dbHelper;
+    private String[] allColumns = {"_id","score1","score2","name","time","Shots","ShotsOn","Fouls","Offsides","Yellows","Reds","X","Y","uri"};
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +40,9 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
         matchFragment = (MatchFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         statFragment = (StatFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
 
+
+        database = dbHelper.getWritableDatabase();
+
         endButton = (Button) findViewById(R.id.buttonEnd);
         endButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +50,19 @@ public class MatchActivity extends FragmentActivity implements MatchFragment.OnF
                 resultStat = statFragment.returnValues();
                 resultMatch = matchFragment.returnValues();
                 Toast.makeText(MatchActivity.this,String.valueOf(resultMatch[2]),Toast.LENGTH_LONG).show();
+                ContentValues values = new ContentValues();
+                values.put(allColumns[1],(int)resultMatch[0]);
+                values.put(allColumns[2],(int)resultMatch[1]);
+                values.put(allColumns[3],String.valueOf(resultMatch[2]));
+                values.put(allColumns[4],""+resultMatch[3]);
+                values.put(allColumns[5],resultStat[0]);
+                values.put(allColumns[6],resultStat[1]);
+                values.put(allColumns[7],resultStat[2]);
+                values.put(allColumns[8],resultStat[3]);
+                values.put(allColumns[9],resultStat[4]);
+                values.put(allColumns[10],resultStat[5]);
+
+                long newRowId = database.insert(DbHelper.DATABASE_NAME, null, values);
             }
         });
     }
